@@ -32,17 +32,7 @@
                               required>
                 </div>
 
-                <div class="form-group m-5">
-                    <label for="dossier_id"></label>
-                      <input name="dossier_id" 
-                            type="text" 
-                            class="form-control" 
-                            id="dossier_id" 
-                            v-model="Dossier_id" 
-                            placeholder="Entrez le numéro de dossier"  
-                            required>
-                </div>
-
+          
             </div>
 
               <div class="col-md-6 mt-5 justify-content-end">
@@ -51,10 +41,12 @@
                           <label for="date_start">date début de visite : </label>
 
                           <input type="text"
+                          placeholder="03-31-2021"
                           id="date_start" 
                           name="date_start"
                           class="ml-2"
-                          v-model="date_start">
+                          v-model="date_start"
+                          required>
 
                   </div> 
                 
@@ -64,10 +56,12 @@
                           <label for="timedate">date de fin de visite : </label>
 
                           <input type="text" 
+                            placeholder="03-31-2021"
                             id="dtime" 
                             name="dtime"
                             class="ml-2"
-                            v-model="date_end">
+                            v-model="date_end"
+                            required>
 
                   </div> 
             </div>
@@ -127,7 +121,6 @@ export default {
                 'InEmail':this.InEmail,
                 'InputEmail': this.InputEmail,
                 'date_start': this.date_start,
-                'ccial_id': this.ccial_id,
                 'date_end':this.date_end
               })
                 .then(() => {
